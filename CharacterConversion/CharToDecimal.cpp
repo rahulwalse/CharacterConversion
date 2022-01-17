@@ -20,6 +20,6 @@ long long CharToDecimal(const std::string& numbers)
 		/* Construct decimal integer by shifting previous digit to left */
 		decimalInteger = decimalInteger * 10 + decimalDigit;
 	}
-
+	/* Return the constructed decimal (integer) representation */
 	return decimalInteger;
 }
