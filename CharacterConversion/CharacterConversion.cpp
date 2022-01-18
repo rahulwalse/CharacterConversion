@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <string>
-#include "AuxFunc.h"
+#include "conversionf.h"
 
 int main()
 {
@@ -16,29 +16,33 @@ int main()
     for(int column = 1; column <= 35; ++column)
         std::cout << "-";
 
-    int choice; bool exitStatus = false;    std::string input_string;
+    int choice; bool exitStatus = false;    std::string charString;
     while(!exitStatus)
     {
         /* Display the menu to the user. */
         std::cout << "\n1. Convert string of characters to its equivalent decimal representation";
-        std::cout << "\n2. Exit\nEnter your choice: ";
+        std::cout << "\n2. Convert string of characters to its equivalent decimal representation including decimal point";
+        std::cout << "\n3. Exit\nEnter your choice: ";
         std::cin >> choice;
 
         switch (choice)
         {
-            default:std::cout << "\nInvalid choice! Please choose from the options provided.\n";
-                    break;
-
             case 1: std::cout << "\nInput string (numbers): ";
-                    std::cin >> input_string;
-                    std::cout << "\nDecimal representation: " << CharToDecimal(input_string) << "\n";
+                    std::cin >> charString;
+                    std::cout << "\nDecimal (integer) representation: " << CharToInteger(charString) << "\n";
                     break;
 
-            case 2: std::cout << "\nExiting the program...\n";
+            case 2: std::cout << "\nInput string (numbers including decimal point): ";
+                    std::cin >> charString;
+                    std::cout << "\nDecimal representation: " << CharToDecimal(charString) << "\n";
+                    break;
+
+            case 3: std::cout << "\nExiting the program...\n";
                     exitStatus = true;
                     break;
 
+            default:std::cout << "\nInvalid choice! Please choose from the options provided.\n";
+                    break;
         }
     }
-
 }
