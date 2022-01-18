@@ -18,12 +18,33 @@
     <ClCompile Include="CharacterConversion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CharToInteger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="CharToDecimal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DecimalPosition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GetIntegerString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GetDecimalString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvertToDecimal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DigitCount.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AuxFunc.h">
+    <ClInclude Include="conversionf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="auxfunc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

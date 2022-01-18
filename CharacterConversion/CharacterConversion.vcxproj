@@ -141,9 +141,16 @@
   <ItemGroup>
     <ClCompile Include="CharacterConversion.cpp" />
     <ClCompile Include="CharToDecimal.cpp" />
+    <ClCompile Include="CharToInteger.cpp" />
+    <ClCompile Include="ConvertToDecimal.cpp" />
+    <ClCompile Include="DecimalPosition.cpp" />
+    <ClCompile Include="DigitCount.cpp" />
+    <ClCompile Include="GetDecimalString.cpp" />
+    <ClCompile Include="GetIntegerString.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AuxFunc.h" />
+    <ClInclude Include="auxfunc.h" />
+    <ClInclude Include="conversionf.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
