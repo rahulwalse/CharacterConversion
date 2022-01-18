@@ -1,6 +1,6 @@
 /*
-	This header file contains declarations of the functions used for converting characters
-	(string of characters 0 - 9) to its equivalent decimal representation.
+	This header file contains auxilary functions that are used in converting character
+	string which may contain a decimal point to its equivalent decimal representation.
 */
 
 #ifndef AUXFUNC_H
@@ -8,6 +8,12 @@
 
 #include <string>
 
-long long CharToDecimal(const std::string&);
+int DecimalPosition(const std::string&);
+
+std::string GetIntegerString(const std::string&, const std::string::size_type&);
+std::string GetDecimalString(const std::string&, const std::string::size_type&);
+
+double ConvertToDecimal(const long long&);
+int DigitCount(const long long&);
 
 #endif // !AUXFUNC_H
