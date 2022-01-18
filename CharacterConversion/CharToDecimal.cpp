@@ -1,25 +1,51 @@
-/* 
-	Implementation for converting input characters (string of numbers) to
-	its equivalent decimal (integer) representation.
+/*
+	Implementation for converting character string which may contain a decimal
+	point to its equivalent decimal representation.
 */
 
 #include <string>
+#include "auxfunc.h"
+#include "conversionf.h"
 
-long long CharToDecimal(const std::string& numbers)
+long double CharToDecimal(const std::string& inputString)
 {
-	/* Determine the size of string */
-	std::string::size_type size = numbers.size();
-	const char ZERO = '0';	//ZERO as const to convert input character to decimal
-	int decimalDigit = 0;	long long decimalInteger = 0;
-
-	/* Read the characters in string and convert it to decimal number */
-	for (std::string::size_type position = 0; position < size; ++position)
+	long double decimalNumber = 0;
+	long long integerPart = 0, decimalPart = 0;
+	std::string::size_type decimalIndex = 0, size = inputString.size();
+	
+	/* Scan the input string for decimal point '.' and get the position of decimal point. */
+	int index = DecimalPosition(inputString);
+	/* 
+		If the index is -1 there is no decimal point; CharToInteger() function can be used for conversion.
+	*/
+	if (index == -1)
 	{
-		/* Subtract ASCII value of 0 from the ASCII value of character to convert it to decimal integer */
-		decimalDigit = numbers[position] - ZERO;
-		/* Construct decimal integer by shifting previous digit to left */
-		decimalInteger = decimalInteger * 10 + decimalDigit;
+		decimalNumber = CharToInteger(inputString);
 	}
-	/* Return the constructed decimal (integer) representation */
-	return decimalInteger;
+	else
+	{
+		/* Store the decimal points index in string size_type. */
+		decimalIndex = index;
+
+		/* Two strings to hold integer and decimal part. */
+		std::string integerString, decimalString;
+
+		/* Separate the integer and decimal part from the input string. */
+		/* Integer part of the string */
+		integerString = GetIntegerString(inputString, decimalIndex);
+		/* Decimal part of the string */
+		decimalString = GetDecimalString(inputString, decimalIndex);
+
+		/* Convert the integer part to its equivalent decimal (integer) representation. */
+		integerPart = CharToInteger(integerString);
+		/* Convert the decimal part to its equivalent decimal representation. */
+		decimalPart = CharToInteger(decimalString);
+
+		/* 
+			Convert the decimal part to its equivalent decimal representation and add the 
+			integer part to get the complete decimal number.
+		*/
+		decimalNumber = integerPart + ConvertToDecimal(decimalPart);
+	}
+	return decimalNumber;
 }
