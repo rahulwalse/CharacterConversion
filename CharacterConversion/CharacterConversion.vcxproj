@@ -144,9 +144,13 @@
     <ClCompile Include="CharToInteger.cpp" />
     <ClCompile Include="ConvertToDecimal.cpp" />
     <ClCompile Include="DecimalPosition.cpp" />
+    <ClCompile Include="DecimalToChar.cpp" />
+    <ClCompile Include="DecimalToInteger.cpp" />
     <ClCompile Include="DigitCount.cpp" />
     <ClCompile Include="GetDecimalString.cpp" />
     <ClCompile Include="GetIntegerString.cpp" />
+    <ClCompile Include="ReverseDigits.cpp" />
+    <ClCompile Include="StringCreator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="auxfunc.h" />
