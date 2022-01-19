@@ -12,4 +12,6 @@ long long CharToInteger(const std::string&);
 
 long double CharToDecimal(const std::string&);
 
+std::string DecimalToChar(const double&);
+
 #endif // !CONVERSIONF_H
