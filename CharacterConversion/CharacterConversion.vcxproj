@@ -149,6 +149,7 @@
     <ClCompile Include="DigitCount.cpp" />
     <ClCompile Include="GetDecimalString.cpp" />
     <ClCompile Include="GetIntegerString.cpp" />
+    <ClCompile Include="HasDecimalData.cpp" />
     <ClCompile Include="ReverseDigits.cpp" />
     <ClCompile Include="StringCreator.cpp" />
   </ItemGroup>

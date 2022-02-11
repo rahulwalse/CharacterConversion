@@ -24,7 +24,8 @@ int main()
         std::cout << "\n1. Convert string of characters to its equivalent decimal representation";
         std::cout << "\n2. Convert string of characters to its equivalent decimal representation including decimal point";
         std::cout << "\n3. Convert decimal number to its equivalent characters (string) representation";
-        std::cout << "\n4. Exit\nEnter your choice: ";
+        std::cout << "\n4. Check if the given string contains decimal data";
+        std::cout << "\n5. Exit\nEnter your choice: ";
         std::cin >> choice;
 
         switch (choice)
@@ -44,7 +45,15 @@ int main()
                     std::cout << "\nCharacter string representation: " << DecimalToChar(decimalNumber);
                     break;
 
-            case 4: std::cout << "\nExiting the program...\n";
+            case 4: std::cout << "\nInput string (may contain decimal data): ";
+                    std::cin >> charString;
+                    if (HasDecimalData(charString))
+                        std::cout << "\nThe string contains decimal data\n";
+                    else
+                        std::cout << "\nThe string does not contain decimal data\n";
+                    break;
+
+            case 5: std::cout << "\nExiting the program...\n";
                     exitStatus = true;
                     break;
 
