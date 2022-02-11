@@ -14,4 +14,6 @@ long double CharToDecimal(const std::string&);
 
 std::string DecimalToChar(const double&);
 
+bool HasDecimalData(const std::string&);
+
 #endif // !CONVERSIONF_H
